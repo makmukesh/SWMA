@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">14sp</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">40dp</item><!-- menu item height-->
+
+        <item name="listPreferredItemHeightSmall">40dp</item>
+
+        <item name="android:listPreferredItemPaddingLeft">8dp</item>
+        <item name="listPreferredItemPaddingLeft">8dp</item>
+
+        <item name="android:listPreferredItemPaddingRight">8dp</item>
+        <item name="listPreferredItemPaddingRight">8dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeDialogCustom" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <!-- for dialog animation -->
+    <style name="dialog_animation">
+        <item name="android:windowEnterAnimation">@anim/anim_in_1</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_2</item>
+    </style>
+
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="ToolBarStyle" parent="AppTheme">
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+<!--
+    <style name="NavigationDrawerStyle">
+
+        <item name="android:textSize">20sp</item>&lt;!&ndash; text size in menu&ndash;&gt;
+
+        &lt;!&ndash; item size in menu&ndash;&gt;
+        <item name="android:listPreferredItemHeightSmall">40dp</item>
+        <item name="listPreferredItemHeightSmall">40dp</item>
+
+        &lt;!&ndash; item padding left in menu&ndash;&gt;
+        <item name="android:listPreferredItemPaddingLeft">8dp</item>
+        <item name="listPreferredItemPaddingLeft">8dp</item>
+
+        &lt;!&ndash; item padding right in menu&ndash;&gt;
+        <item name="android:listPreferredItemPaddingRight">8dp</item>
+        <item name="listPreferredItemPaddingRight">8dp</item>
+    </style>-->
+</resources>

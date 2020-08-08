@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1003238567210",
+    "firebase_url": "https://synthetic-mills-associat-afa33.firebaseio.com",
+    "project_id": "synthetic-mills-associat-afa33",
+    "storage_bucket": "synthetic-mills-associat-afa33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003238567210:android:520a6bf37c49330e830253",
+        "android_client_info": {
+          "package_name": "com.vpipl.sawma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003238567210-abjhq0mv4f3sicitlj3thcfq57g8ttn5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYq_cLDfntCnNPo6ENY5qAKjI9B3l1M9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003238567210-abjhq0mv4f3sicitlj3thcfq57g8ttn5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

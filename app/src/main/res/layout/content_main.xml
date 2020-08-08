@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.vpipl.sawma.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/bg_home_top"
+                        android:orientation="vertical"
+                        tools:ignore="MissingConstraints">
+
+                        <com.google.android.material.appbar.AppBarLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/AppTheme.AppBarOverlay"
+                            tools:ignore="MissingConstraints">
+
+                            <androidx.appcompat.widget.Toolbar
+                                android:id="@+id/toolbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="90dp"
+                                android:paddingTop="20dp"
+                                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="90dp"
+                                    android:layout_marginLeft="-20dp"
+                                    android:gravity="center|start">
+
+                                    <com.vpipl.sawma.Utils.CircularImageView
+                                        android:id="@+id/user_profile"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/bg_circle"
+                                        android:contentDescription="@string/nav_header_desc"
+                                        android:padding="2dp"
+                                        android:src="@mipmap/ic_launcher_round" />
+
+                                    <TextView
+                                        android:id="@+id/txt_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_toRightOf="@+id/user_profile"
+                                        android:gravity="start|center"
+                                        android:text=""
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textColor="#fff"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/txt_department"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/txt_name"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_toRightOf="@+id/user_profile"
+                                        android:gravity="start|center"
+                                        android:text="Android Developer"
+                                        android:textColor="#fff"
+                                        android:textSize="12dp"
+                                        android:visibility="visible" />
+
+                                </RelativeLayout>
+
+                            </androidx.appcompat.widget.Toolbar>
+
+                        </com.google.android.material.appbar.AppBarLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:orientation="vertical"
+                        tools:ignore="MissingConstraints">
+
+                        <FrameLayout
+                            android:id="@+id/frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp">
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/viewPager"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp" />
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/SliderDots"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_gravity="bottom|center"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_recent_meeting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_rectangle_top_rounded_red"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Recent Meetings"
+                                android:textColor="@color/color_white"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_upcoming_meeting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Upcoming Meetings"
+                                android:textColor="@color/color_gray"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/bg_drop_shadow"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ll_recent_meeting"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_data_found"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/listView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:divider="@null"
+                                    android:scrollbarStyle="outsideOverlay"
+                                    android:scrollbars="none" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_no_data_found"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <com.airbnb.lottie.LottieAnimationView
+                                        android:id="@+id/lottie_icon_mobile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="300dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="3dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_data_not_found"
+                                        app:lottie_autoPlay="true"
+                                        app:lottie_loop="true"
+                                        app:lottie_rawRes="@raw/no_data_found" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginBottom="50dp"
+                                        android:fontFamily="cursive"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="No Data Found .... "
+                                        android:textColor="@color/color_gray"
+                                        android:textSize="16dp" />
+                                </FrameLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ll_upcoming_meeting"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_data_found_up"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/listView_up"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:divider="@null"
+                                    android:scrollbarStyle="outsideOverlay"
+                                    android:scrollbars="none" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_no_data_found_up"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <com.airbnb.lottie.LottieAnimationView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="300dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="3dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_data_not_found"
+                                        app:lottie_autoPlay="true"
+                                        app:lottie_loop="true"
+                                        app:lottie_rawRes="@raw/no_data_found" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginBottom="50dp"
+                                        android:fontFamily="cursive"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="No Data Found .... "
+                                        android:textColor="@color/color_gray"
+                                        android:textSize="16dp" />
+                                </FrameLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FCFCFC">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/ll_home_bo_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_home_bo_home"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_nav_feedback"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_home_bo_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_fill_home_bottom"
+                    android:fontFamily="@font/opensans_bold"
+                    android:padding="3dp"
+                    android:text="Home"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home_bo_attendance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_home_bo_attendance"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_nav_attendance"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txt_home_bo_attendance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_fill_home_bottom"
+                    android:fontFamily="@font/opensans_bold"
+                    android:padding="3dp"
+                    android:text="Attendance"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home_bo_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_home_bo_profile"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_nav_profile"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txt_home_bo_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_fill_home_bottom"
+                    android:fontFamily="@font/opensans_bold"
+                    android:padding="3dp"
+                    android:text="Profile"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home_bo_notification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ru.nikartm.support.ImageBadgeView
+                    android:id="@+id/mukesh_begview"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_notification"
+                    app:ibv_badgeColor="@android:color/black"
+                    app:ibv_badgeLimitValue="false"
+                    app:ibv_badgePosition="top_right"
+                    app:ibv_badgeTextColor="#ffffff"
+                    app:ibv_badgeTextSize="8sp"
+                    app:ibv_badgeTextStyle="bold"
+                    app:ibv_badgeValue="0"
+                    app:ibv_fixedBadgeRadius="7dp"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <!--    <ImageView
+                        android:id="@+id/iv_home_bo_notification"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_nav_notification"
+                        android:tint="@color/colorPrimary" />-->
+
+                <TextView
+                    android:id="@+id/txt_home_bo_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_fill_home_bottom"
+                    android:fontFamily="@font/opensans_bold"
+                    android:padding="3dp"
+                    android:text="Notification"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home_bo_logout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_home_bo_logout"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_nav_logout"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txt_home_bo_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_fill_home_bottom"
+                    android:fontFamily="@font/opensans_bold"
+                    android:padding="3dp"
+                    android:text="Logout"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

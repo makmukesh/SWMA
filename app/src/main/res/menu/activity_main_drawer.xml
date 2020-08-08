@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_nav_profile"
+            android:title="Profile"
+            tools:override="true" />
+        <item
+            android:id="@+id/nav_membership"
+            android:icon="@drawable/ic_nav_membership"
+            android:title="Membership"
+            android:visible="false"
+            tools:override="true" />
+        <item
+            android:id="@+id/nav_meeting"
+            android:icon="@drawable/ic_nav_meetings"
+            android:title="Meeting"
+            tools:override="true" />
+        <item
+            android:id="@+id/nav_pooling"
+            android:icon="@drawable/ic_nav_pooling"
+            android:title="Polling"
+            tools:override="true" />
+
+        <item
+            android:id="@+id/nav_circuler"
+            android:icon="@drawable/ic_nav_circular"
+            android:title="Circuler"
+            tools:override="true" />
+
+        <item
+            android:id="@+id/nav_attendance"
+            android:icon="@drawable/ic_nav_attendance"
+            android:title="Attendance"
+            tools:override="true" />
+
+       <!-- <item
+            android:id="@+id/nav_membership_renewal"
+            android:icon="@drawable/ic_nav_membership_renewal"
+            android:title="MemberShip Renewal" />-->
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_nav_notification"
+            android:title="Notifications" />
+
+       <!-- <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_nav_feedback"
+            android:title="Feedback" />-->
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_nav_logout"
+            android:title="Logout" />
+    </group>
+
+    <!--<item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>-->
+
+</menu>
